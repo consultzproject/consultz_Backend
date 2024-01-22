@@ -1,0 +1,16 @@
+{
+    "commanErrorString":"Something went wrong",
+    "alredayRegistered":"Email is Alreday Registered",
+    "notRegistered":"Email is Not Registered",
+    "SuccessString":"Success",
+    "failureString":"failure",
+    "oopsErrorMessage" : "OOPS",
+    "successStatusCode" : 200,
+    "errorStatusCode" : 404,
+    "unauthorizedStatusCode" : 401,
+    "registrationSuccess" : "Admin registration successfully !!",
+    "loginSuccess" : "login successfully",
+    "url" : "http://uwinlite1.medallcorp.in/hrms/Service1.svc/IsAuthenticated",
+    "content":"content"
+
+}
