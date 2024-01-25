@@ -12,7 +12,7 @@ module.exports = function (app, validator) {
     const storage = multer.diskStorage({
         destination: function (req, file, cb) {
           // Specify the destination folder for uploaded files
-          cb(null, 'https://seyalbackend.onrender.com/uploads');
+          cb(null, 'consultzproject/consultz_Backend/tree/main/uploads/');
         },
         filename: function (req, file, cb) {
           // Specify the filename for the uploaded file
