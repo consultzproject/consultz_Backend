@@ -34,19 +34,19 @@ module.exports = function () {
           }
         callback(response)
     }
-    this.getResumeFilterController = async (req, callback) => {
-        var response = {}
-        var resumeController = await resumeServiceObject.getResumeFilterService(req)
-        if (resumeController.error == true) {
-            response.error = true
-            response.status = "failure"
-            response.message = resumeController.message
-        } else {
-            response.error = false
-            response.status = "success"
-            response.message = resumeController.message
-            response.data = resumeController.data
-          }
-        callback(response)
-    }
+    // this.getResumeFilterController = async (req, callback) => {
+    //     var response = {}
+    //     var resumeController = await resumeServiceObject.getResumeFilterService(req)
+    //     if (resumeController.error == true) {
+    //         response.error = true
+    //         response.status = "failure"
+    //         response.message = resumeController.message
+    //     } else {
+    //         response.error = false
+    //         response.status = "success"
+    //         response.message = resumeController.message
+    //         response.data = resumeController.data
+    //       }
+    //     callback(response)
+    // }
 }

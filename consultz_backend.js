@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({
     limit: '2mb',
     extended: true
 }))
+app.use("/files", express.static("files"));
+
 const mongoose = require('./config/dbConfig')
 const { check, validationResult } = require('express-validator')
 const validator = {}

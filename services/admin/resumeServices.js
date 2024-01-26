@@ -72,32 +72,32 @@ module.exports = function () {
         });
       };
   
-      this.getResumeFilterService = (userData) => {
-        return new Promise(async function (resolve) {
-          var response = {};
-          try {
+      // this.getResumeFilterService = (userData) => {
+      //   return new Promise(async function (resolve) {
+      //     var response = {};
+      //     try {
           
-              var resumeData = await resumeDaoObject.getResumeFilterDao(userData);
-              if (resumeData.error == false) {
-                response.error = false;
-                response.status = "success";
-                response.data = resumeData.data
+      //         var resumeData = await resumeDaoObject.getResumeFilterDao(userData);
+      //         if (resumeData.error == false) {
+      //           response.error = false;
+      //           response.status = "success";
+      //           response.data = resumeData.data
                
-                resolve(response);
-              } else {
-                response.error = true;
-                response.status = "failure";
-                response.message = "Creation Failed";
-                resolve(response);
-              }
+      //           resolve(response);
+      //         } else {
+      //           response.error = true;
+      //           response.status = "failure";
+      //           response.message = "Creation Failed";
+      //           resolve(response);
+      //         }
              
-          } catch (error) {
-            console.log(error);
-            response.error = true;
-            response.status = "failure";
-            response.message = "OOPS Service Error";
-            resolve(response);
-          }
-        });
-      };
+      //     } catch (error) {
+      //       console.log(error);
+      //       response.error = true;
+      //       response.status = "failure";
+      //       response.message = "OOPS Service Error";
+      //       resolve(response);
+      //     }
+      //   });
+      // };
 }

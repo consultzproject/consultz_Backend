@@ -12,7 +12,7 @@ module.exports = function (app, validator) {
     const storage = multer.diskStorage({
         destination: function (req, file, cb) {
           // Specify the destination folder for uploaded files
-          cb(null, 'consultzproject/consultz_Backend/tree/main/uploads/');
+          cb(null, './files');
         },
         filename: function (req, file, cb) {
           // Specify the filename for the uploaded file
@@ -75,17 +75,17 @@ module.exports = function (app, validator) {
         })
     }
   })
-  app.get( userPath + "/filterresume",  function (request, response) {
-    var error = validator.validation(request)
-    if (error.array().length) {
-        this.requestHandler(error.array(), true, function (message) {
-            response.send(message)
-        })
-    } else {
-        resumeControllerObject.getResumeFilterController(request.body, function (message) {
-            return response.send(message)
-        })
-    }
-  })
+  // app.get( userPath + "/filterresume",  function (request, response) {
+  //   var error = validator.validation(request)
+  //   if (error.array().length) {
+  //       this.requestHandler(error.array(), true, function (message) {
+  //           response.send(message)
+  //       })
+  //   } else {
+  //       resumeControllerObject.getResumeFilterController(request.body, function (message) {
+  //           return response.send(message)
+  //       })
+  //   }
+  // })
   };
   

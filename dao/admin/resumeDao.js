@@ -20,7 +20,7 @@ module.exports = function () {
     this.getResumeDao = async (data) => {
       var response = {};
       return new Promise(function (resolve, reject) {
-        resumeModal.find(
+        resumeModal.find(!data.designation?{}:{designation:data.designation},
         
           function (error, result) {
             if (error) {
@@ -35,22 +35,22 @@ module.exports = function () {
       });
     };
   
-    this.getResumeFilterDao = async (data) => {
-      var response = {};
-      return new Promise(function (resolve, reject) {
-        resumeModal.find({designation:data.designation},{},
+    // this.getResumeFilterDao = async (data) => {
+    //   var response = {};
+    //   return new Promise(function (resolve, reject) {
+    //     resumeModal.find(!data.designation?{}:{designation:data.designation},
         
-          function (error, result) {
-            if (error) {
-              response.error = true;
-            } else {
-              response.error = false;
-              response.data = result;
-            }
-            resolve(response);
-          }
-        );
-      });
-    };
+    //       function (error, result) {
+    //         if (error) {
+    //           response.error = true;
+    //         } else {
+    //           response.error = false;
+    //           response.data = result;
+    //         }
+    //         resolve(response);
+    //       }
+    //     );
+    //   });
+    // };
   };
   
