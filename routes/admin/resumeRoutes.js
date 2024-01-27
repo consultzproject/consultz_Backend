@@ -51,18 +51,18 @@ module.exports = function (app, validator) {
     });
  
   
-    app.post( userPath + "/resume",function (request, response) {
-      var error = validator.validation(request)
-      if (error.array().length) {
-          this.requestHandler(error.array(), true, function (message) {
-              response.send(message)
-          })
-      } else {
-        resumeControllerObject.addResumeController(request.body, function (message) {
-              return response.send(message)
-          })
-      }
-  })
+  //   app.post( userPath + "/resume",function (request, response) {
+  //     var error = validator.validation(request)
+  //     if (error.array().length) {
+  //         this.requestHandler(error.array(), true, function (message) {
+  //             response.send(message)
+  //         })
+  //     } else {
+  //       resumeControllerObject.addResumeController(request.body, function (message) {
+  //             return response.send(message)
+  //         })
+  //     }
+  // })
   app.get( userPath + "/resume",  function (request, response) {
     var error = validator.validation(request)
     if (error.array().length) {
@@ -70,7 +70,7 @@ module.exports = function (app, validator) {
             response.send(message)
         })
     } else {
-        resumeControllerObject.getResumeController(request.body, function (message) {
+        resumeControllerObject.getResumeController(request.query, function (message) {
             return response.send(message)
         })
     }
