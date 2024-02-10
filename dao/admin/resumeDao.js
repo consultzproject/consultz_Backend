@@ -23,7 +23,6 @@ module.exports = function () {
     };
   
     this.getResumeDao = async (data) => {
-     
       
 
       var response = {};
@@ -36,7 +35,9 @@ module.exports = function () {
           filter.location = data.location;
         }
         if (data.fromDate && data.toDate) {
-        
+          console.log(data.fromDate)
+          console.log(data.toDate)
+
 
           const fromDate = (data.fromDate);
       const toDate = (data.toDate);
