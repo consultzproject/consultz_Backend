@@ -10,6 +10,7 @@ module.exports = function () {
       return new Promise(async function (resolve) {
         var response = {};
         try {
+          
           var sendMail = await this.sendResume(userData);
           if (sendMail === "Sent") {
             var resumeData = await resumeDaoObject.addResumeDao(userData);

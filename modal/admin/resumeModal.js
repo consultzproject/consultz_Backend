@@ -27,7 +27,14 @@ const resumeSchema = new Schema({
     type: String,
     required: true,
   },
-});
+  createdDate: {
+    type: String,
+ 
+  }
+},
+    
+
+);
 
 const resumeModal = mongoose.model("resume", resumeSchema);
 module.exports = resumeModal;

@@ -55,7 +55,6 @@ module.exports = function(){
         return new Promise(function(resolve){
             jwt.verify(token,secret,(err,payload)=>{
                 if(err){
-                  console.log("fghhh",err)
                     result.error = true
                     result.data = null
                     resolve(result)

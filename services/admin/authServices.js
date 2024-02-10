@@ -64,7 +64,6 @@ module.exports = function () {
    
   
     this.getAuthService = (userData) => {
-        console.log(userData)
 
         return new Promise(async function (resolve) {
           var response = {};
