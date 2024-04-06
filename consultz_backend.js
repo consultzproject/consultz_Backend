@@ -21,6 +21,7 @@ validator.validation = validationResult
 require('./routes/admin/contactRoutes')(app,validator)
 require('./routes/admin/resumeRoutes')(app,validator)
 require('./routes/admin/authRoutes')(app,validator)
+require('./routes/admin/uploadRoutes')(app,validator)
 
 
 port=process.env.PORT || 5000;

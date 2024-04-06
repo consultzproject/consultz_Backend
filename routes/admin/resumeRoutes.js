@@ -23,17 +23,17 @@ module.exports = function (app, validator) {
       const upload = multer({ storage: storage });
       
       // Handle POST requests to the /upload endpoint
-      app.post( userPath +'/upload', upload.single('file'), function (req, res) {
-        // Access the uploaded file data in req.file
-        const uploadedFile = req.file;
+      // app.post( userPath +'/upload', upload.single('file'), function (req, res) {
+      //   // Access the uploaded file data in req.file
+      //   const uploadedFile = req.file;
       
-        // Do something with the uploaded file data
-        console.log('Uploaded File:', uploadedFile);
+      //   // Do something with the uploaded file data
+      //   console.log('Uploaded File:', uploadedFile);
       
-        // Send a response to the client
-        res.send(process.env.IMAGE_UPLOAD_URL + '/' + req.file.filename);
+      //   // Send a response to the client
+      //   res.send(process.env.IMAGE_UPLOAD_URL + '/' + req.file.filename);
         
-      });
+      // });
     app.get('/uploads/:filename', function(req, res) {
         const filePath = path.resolve('uploads', req.params.filename);
         console.log(filePath,"filePath")
