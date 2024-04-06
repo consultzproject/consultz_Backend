@@ -30,7 +30,6 @@ app.post(userPath +'/upload', upload.single('file'), (req, res) => {
     };
   
     s3.upload(params, (err, data) => {
-      console.log(data,"check data")
       if (err) {
         console.error(err);
         return res.status(500).send('Error uploading file');
