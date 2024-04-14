@@ -31,6 +31,9 @@ module.exports = function () {
         if (data.designation) {
           filter.designation = data.designation;
         }
+        if (data.roles) {
+          filter.roles = data.roles;
+        }
         if (data.location) {
           filter.location = data.location;
         }
