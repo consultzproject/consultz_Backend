@@ -23,6 +23,10 @@ const resumeSchema = new Schema({
     type: String,
     required: true,
   },
+  exp: {
+    type: String,
+    required: true,
+  },
   location: {
     type: String,
     required: true,
