@@ -26,9 +26,9 @@ require('./routes/admin/uploadRoutes')(app, validator);
 
 // Read SSL certificate and key files
 const options = {
-  key: fs.readFileSync('path/to/private/key.pem'), // Provide the path to your private key
-  cert: fs.readFileSync('path/to/certificate.pem') // Provide the path to your certificate
-};
+  key: fs.readFileSync('/etc/letsencrypt/live/api.seyal.eu/privkey.pem'), // Provide the path to your private key
+  cert: fs.readFileSync('/etc/letsencrypt/live/api.seyal.eu/cert.pem') // Provide the path to your certificate
+  };
 
 const port = process.env.PORT || 5000;
 
