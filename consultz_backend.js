@@ -29,6 +29,7 @@ const options = {
   key: fs.readFileSync('/etc/letsencrypt/live/api.seyal.eu/privkey.pem'), // Provide the path to your private key
   cert: fs.readFileSync('/etc/letsencrypt/live/api.seyal.eu/cert.pem') // Provide the path to your certificate
   };
+  console.log (options,"check options")
 
 const port = process.env.PORT || 5000;
 
